@@ -1,0 +1,17 @@
+Introduction
+
+  Welcome to the project site of the eID Middleware for Android Project.
+  
+  The eID Middleware for Android offers two components:
+
+  * The eID Middleware for Android application itself. This application contains:
+    
+    * The eID Middleware Android service
+
+    * The eID Viewer (using the service)
+
+  * The eID Middleware for Android library
+
+  Via this library you can connect to the service.
+
+  Check out the {{{./eid-mw-android-lib}eID Middleware for Android Library}} for more information.

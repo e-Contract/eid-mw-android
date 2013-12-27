@@ -1,0 +1,56 @@
+eID Middleware for Android Library
+
+  Via the eID Middleware for Android Library you can connect to the eID Middleware for Android.
+
+  First of all you need to install the eID Middleware for Android on your android device.
+
+  The interface is completely asynchronous. You receive different calls, on which you instruct the
+  eID Middleware for Android what to do next via for example BeIDServiceConstants.READ_IDENTITY.
+  Once you're done, you return 0.
+
+  In your Activity you add the following:
+  
++---
+	private BeIDServiceCallback serviceCallback = new BeIDServiceCallback() {
+
+		@Override
+		public int eIDCardInserted() throws RemoteException {
+			return BeIDServiceConstants.READ_IDENTITY;
+		}
+
+		@Override
+		public int eIDIdentity(final Identity identity) throws RemoteException {
+			runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					Toast.makeText(getApplicationContext(),
+							"Hello: " + identity.name, Toast.LENGTH_SHORT)
+							.show();
+				}
+			});
+			return 0;
+		}
+	};
+	
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		...
+		this.serviceCallback.onCreate(this);
+	}
+
+	@Override
+	protected void onDestroy() {
+		this.serviceCallback.onDestroy(this);
+		super.onDestroy();
+	}
++---
+
+  In your AndroidManifest.xml you have to add the following permission:
+  
++---
+<uses-permission android:name="be.e_contract.eid.android.ACCESS" />
++---
+
+Javadoc API
+
+  {{{./apidocs/}Javadoc API}}
