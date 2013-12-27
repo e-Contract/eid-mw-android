@@ -1,0 +1,34 @@
+eID Middleware for Android
+
+  The eID Middleware for Android application contains:
+
+  * The eID Middleware Android service.
+
+  You can connect to this service via AIDL.
+
+  * The eID Viewer (using the service).
+
+  This viewer allows for a read out of the eID card.
+
+* Architecture
+
+  The entry point of the eID Middleware for Android is the <<<BeIDService>>> Android Service.
+  Via AIDL other processes can bind to this service.
+  The <<<BeIDService>>> is using the low-level USB host mode to query for USB CCID smart card readers.
+  It is also using a <<<BroadcastReceiver>>> for the detection of USB device detachments.
+  Once a smart card reader is detected we request for USB permissions and finally end up starting the core <<<CCID>>>.
+
+  The <<<CCID>>> Runnable is doing a simple loop where it detects an inserted eID card, performs some operations on it, and then detects the card removal.
+  When the USB interrupt endpoint is available, we use it to avoid the need for constant USB interface polling.
+  The actual implemention is straightforward CCID, and on top ISO 7816-4 APDU handling.
+
+  The architecture is offering an asynchronous interface towards the service consumers.
+  This gives us a very intuitive experience towards integrating developers, and makes sure that we never 'hang' in the Activities.
+
+  Although the offered API is far from functional complete, the eID Middleware for Android foundations are solid enough to last for a while.
+
+* References
+
+  * {{{http://www.usb.org/developers/devclass_docs/DWG_Smart-Card_CCID_Rev110.pdf}USB CCID}}
+
+  

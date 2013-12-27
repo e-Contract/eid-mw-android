@@ -1,6 +1,10 @@
 Introduction
 
   Welcome to the project site of the eID Middleware for Android Project.
+
+  The eID Middleware for Android is available in the {{{https://play.google.com/store/apps/details?id=be.e_contract.eid.android}Google Play app store}}.
+
+  The eID Middleware for Android should work with any USB CCID smart card reader.
   
   The eID Middleware for Android offers two components:
 
