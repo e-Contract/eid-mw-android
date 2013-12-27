@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/GridLayout1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:columnCount="1"
+    android:orientation="horizontal"
+    android:rowCount="8" >
+
+    <TextView
+        android:id="@+id/firstNameTextView"
+        android:layout_gravity="fill_horizontal" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_gravity="fill_horizontal" />
+
+    <TextView
+        android:id="@+id/dateOfBirthTextView"
+        android:layout_gravity="fill_horizontal" />
+
+    <Space android:layout_gravity="fill" />
+
+    <TextView
+        android:id="@+id/streetAndNumberTextView"
+        android:layout_gravity="fill_horizontal" />
+
+    <TextView
+        android:id="@+id/municipalityTextView"
+        android:layout_gravity="fill_horizontal" />
+
+    <TextView
+        android:id="@+id/zipTextView"
+        android:layout_gravity="fill_horizontal" />
+
+    <ImageView
+        android:id="@+id/photoImageView"
+        android:layout_gravity="left|top" />
+
+</GridLayout>
