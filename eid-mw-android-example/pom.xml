@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>be.e_contract.eid</groupId>
 		<artifactId>android</artifactId>
-		<version>1.1.0</version>
+		<version>1.1.1-SNAPSHOT</version>
 	</parent>
 
 	<groupId>be.e-contract.eid.android</groupId>
@@ -54,7 +54,7 @@
 			<groupId>be.e-contract.eid.android</groupId>
 			<artifactId>eid-mw-android-lib</artifactId>
 			<type>apklib</type>
-			<version>1.1.0</version>
+			<version>1.1.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
