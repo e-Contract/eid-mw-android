@@ -1,5 +1,7 @@
 <resources>
 
     <string name="app_name">eID Viewer</string>
+    
+    <string name="browser_app_name">eID Middleware</string>
 
 </resources>
