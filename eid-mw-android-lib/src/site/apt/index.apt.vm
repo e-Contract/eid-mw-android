@@ -4,6 +4,8 @@ eID Middleware for Android Library
 
   First of all you need to install the eID Middleware for Android on your android device.
 
+  The library is available within our {{{https://www.e-contract.be/maven2/be/e-contract/eid/android/eid-mw-android-lib/}Maven repository}}.
+
   The interface is completely asynchronous. You receive different calls, on which you instruct the
   eID Middleware for Android what to do next via for example BeIDServiceConstants.READ_IDENTITY.
   Once you're done, you return 0.

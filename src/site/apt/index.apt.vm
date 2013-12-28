@@ -14,6 +14,10 @@ Introduction
 
     * The eID Viewer (using the service)
 
+    []
+
+  Check out {{{./eid-mw-android}eID Middleware for Android}} for more information about the architecture and design.
+
   * The eID Middleware for Android library
 
   Via this library you can connect to the service.
