@@ -31,4 +31,6 @@ eID Middleware for Android
 
   * {{{http://www.usb.org/developers/devclass_docs/DWG_Smart-Card_CCID_Rev110.pdf}USB CCID}}
 
+  * {{{http://www.cardwerk.com/smartcards/smartcard_standard_ISO7816-4.aspx}ISO-7816 Part 4}}
+
   
