@@ -25,6 +25,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="be.e_contract.eid.android.BeIDBrowserActivity" >
+            <intent-filter>
+                <data android:scheme="beid" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
 
         <service
             android:name="be.e_contract.eid.android.BeIDService"
