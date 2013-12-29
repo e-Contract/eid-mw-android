@@ -12,6 +12,8 @@
     <permission android:name="be.e_contract.eid.android.ACCESS" >
     </permission>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:debuggable="false"
